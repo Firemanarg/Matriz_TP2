@@ -66,13 +66,11 @@ void MainWindow::on_pushButtonCriarA_clicked()
 
 
 
-    //Ativar Limpar
-
+        //Ativar Limpar
     ui->pushButtonLimparA->setEnabled(true);
 
 
-    //Desativar Criar
-
+        //Desativar Criar
     ui->pushButtonCriarA->setEnabled(false);
 
 
@@ -90,15 +88,13 @@ void MainWindow::on_pushButtonCriarA_clicked()
     if (this->matrizB){
         ui->pushButtonSomar->setEnabled(true);
 
-    //Botões da Matriz A
+            //Botões da Matriz A
+        ui->pushButtonSubtrairA->setEnabled(true);
+        ui->pushButtonMultiplicarA->setEnabled(true);
 
-    ui->pushButtonSubtrairA->setEnabled(true);
-    ui->pushButtonMultiplicarA->setEnabled(true);
-
-    //Botões da Matriz B
-
-    ui->pushButtonSubtrairB->setEnabled(true);
-    ui->pushButtonMultiplicarB->setEnabled(true);
+            //Botões da Matriz B
+        ui->pushButtonSubtrairB->setEnabled(true);
+        ui->pushButtonMultiplicarB->setEnabled(true);
 
     }
 
