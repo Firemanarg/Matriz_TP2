@@ -4,11 +4,13 @@
 #include <QInputDialog>
 
 MainWindow::MainWindow(QWidget *parent) :
-QMainWindow(parent),
-ui(new Ui::MainWindow)
+    QMainWindow(parent),
+    ui(new Ui::MainWindow),
+    matrizA(NULL),
+    matrizB(NULL)
 
 {
-ui->setupUi(this);
+    ui->setupUi(this);
 }
 
 
