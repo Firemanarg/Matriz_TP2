@@ -60,7 +60,7 @@ QString Matriz::getMatriz() const
         for(int colR=0; colR<col; colR++){
             saida += QString::number(*(this->array + (linR * col + colR)));
 
-            if(colR != col)
+            if(linR != lin-1 && colR != col-1)
                 saida += "|";
 
         }
