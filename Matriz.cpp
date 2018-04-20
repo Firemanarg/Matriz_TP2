@@ -109,13 +109,11 @@ Matriz* Matriz::operator - (Matriz const * const matriz) const{
 bool Matriz::operator ==(Matriz const * const matriz) const
 {
 
-    int tamA = this->quantidadeDeLinhas * this->quantidadeDeColunas;
-    int tamB = matriz->getQuantidadeDeLinhas() * matriz->getQuantidadeDeColunas();
-
-
-
-    if (tamA != tamB)
+    if (this->quantidadeDeLinhas != matriz->getQuantidadeDeLinhas() ||
+        this->quantidadeDeColunas != matriz->getQuantidadeDeColunas())
+        
         return false;
+
 
      for (int lin=0; lin<this->quantidadeDeLinhas; lin++){
           for (int col=0; col<this->quantidadeDeColunas; col++){
@@ -148,8 +146,7 @@ Matriz* Matriz::operator + (const Matriz * const matriz) const
 
         if (this->quantidadeDeLinhas != matriz->getQuantidadeDeLinhas()
                 ||this->quantidadeDeColunas != matriz->getQuantidadeDeColunas())
-            throw QString("As matrizes possuem tamanho diferente");
-
+            throw QString("As matrizes possuem tamanho diferente")
         Matriz *saida = new Matriz(this->quantidadeDeLinhas, this->quantidadeDeColunas);
 
         for (int lin=0; lin<this->quantidadeDeLinhas; lin++){
